@@ -240,3 +240,23 @@ html {
     border-radius: 50%;
     transform: translateX(-50%);
 }
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item {
+        padding-right: 0;
+        padding-left: 30px;
+        justify-content: flex-start;
+    }
+
+    .timeline-item:nth-child(even) {
+        padding-left: 30px;
+    }
+
+    .timeline-item::before {
+        left: 10px;
+    }
+}
