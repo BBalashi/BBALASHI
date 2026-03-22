@@ -7,6 +7,7 @@ body {
     background-color: #0f0f0f;
     color: #e5e5e5;
     font-family: monospace;
+    font-size: 18px;
 }
 
 header {
@@ -80,6 +81,7 @@ section h2{
 section p{
     max-width: 600px;
     line-height: 1.7;
+    font-size: 18px;
 }
 
 #contact a{
@@ -135,6 +137,7 @@ nav.scrolled {
     transition: all 0.3s ease;
     opacity: 0;
     pointer-events: none;
+    font-size: 18px;
 }
 
 #back-to-top.visible {
@@ -161,4 +164,79 @@ header::after {
 
 html {
     scroll-padding-top: 60px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: rgba(249, 168, 212, 0.15);
+    transform: translateX(-50%);
+}
+
+.timeline-item{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: calc(50% + 30px);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: calc(50% + 30px);
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(249, 168, 212, 0.2);
+    border-radius: 6px;
+    padding: 20px;
+    max-width: 380px;
+    width: 100%;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.timeline-content:hover {
+    border: 1px solid #f9a8d4;
+    background: rgba(249, 168, 212, 0.05);
+    backdrop-filter: blur(4px);
+}
+
+.date {
+    color: #f9a8d4;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.timeline-content h3 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: #e5e5e5;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    background: #f9a8d4;
+    border-radius: 50%;
+    transform: translateX(-50%);
 }
