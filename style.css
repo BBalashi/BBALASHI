@@ -279,4 +279,14 @@ html {
     .timeline-item::before {
         left: 10px;
     }
+
+    header h1 {
+        font-size: 36px;
+        word-break: break-word;
+    }
+
+    section, header {
+        padding: 20px;
+        box-sizing: border-box;
+    }
 }
