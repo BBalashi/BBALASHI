@@ -242,6 +242,26 @@ html {
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 24px;
+    }
+
+    header h2 {
+        font-size: 16px;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
     .timeline::before {
         left: 10px;
     }
