@@ -26,3 +26,10 @@ setInterval(function () {
     currentIndex = (currentIndex + 1) % titles.length
     cyclingTitle.textContent = titles[currentIndex]
 }, 1000)
+
+const hamburger = document.querySelector('#hamburger')
+const sidebar = document.querySelector('#sidebar')
+
+hamburger.addEventListener('click', function() {
+    sidebar.classList.toggle('open')
+})
