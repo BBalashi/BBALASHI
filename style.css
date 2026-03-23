@@ -51,6 +51,7 @@ nav{
 }
 
 nav a{
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     background: rgba(255, 255, 255, 0.05);
     padding: 6px 12px;
@@ -62,6 +63,7 @@ nav a{
 }
 
 nav a:hover {
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid #f9a8d4;
 }
@@ -117,6 +119,7 @@ section p{
 }
 
 .project-card {
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(249, 168, 212, 0.2);
@@ -160,6 +163,7 @@ section p{
 }
 
 #contact a {
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     background: rgba(255, 255, 255, 0.05);
     padding: 10px 20px;
@@ -173,6 +177,7 @@ section p{
 
 #contact a:hover {
     border: 1px solid #f9a8d4;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -183,6 +188,7 @@ nav.scrolled {
     right: 0;
     padding: 10px 20px;
     background: rgba(15, 15, 15, 0.85);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     justify-content: flex-start;
     z-index: 1000;
@@ -202,6 +208,7 @@ nav.scrolled {
     border-radius: 10px;
     cursor: pointer;
     font-family: monospace;
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     transition: all 0.3s ease;
     opacity: 0;
@@ -216,6 +223,7 @@ nav.scrolled {
 
 #back-to-top:hover {
     border: 1px solid #f9a8d4;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -291,12 +299,14 @@ html {
     max-width: 380px;
     width: 100%;
     transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
 }
 
 .timeline-content:hover {
     border: 1px solid #f9a8d4;
     background: rgba(249, 168, 212, 0.05);
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
 }
 
@@ -423,7 +433,8 @@ html {
         border-radius: 10px;
         font-size: 20px;
         cursor: pointer;
-        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     }
 
     #sidebar {
@@ -433,7 +444,8 @@ html {
         width: 250px;
         height: 100%;
         background: rgba(15, 15, 15, 0.95);
-        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
         display: flex;
         flex-direction: column;
         padding: 80px 20px 20px;
