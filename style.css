@@ -123,6 +123,7 @@ section p{
     border-radius: 10px;
     padding: 24px;
     transition: all 0.3s ease;
+    opacity: 1;
 }
 
 .project-card:hover {
@@ -470,9 +471,9 @@ html {
 }
 
 .contact-links img {
-    width: 20px;
-    height: 20px;
-    max-width: 20px;
+    width: 20px !important;
+    height: 20px !important;
+    max-width: 20px !important;
     vertical-align: middle;
     margin-right: 6px;
 }
