@@ -157,13 +157,6 @@ section p{
     display: flex;
     gap: 15px;
     margin-top: 20px;
-    align-items: center;
-}
-
-.contact-links a {
-    display: flex;
-    align-items: center;
-    gap: 6px;
 }
 
 #contact a {
@@ -474,6 +467,12 @@ html {
 
 #sidebar {
     display: none;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        display: flex;
+    }
 }
 
 
