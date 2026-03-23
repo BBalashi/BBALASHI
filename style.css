@@ -157,6 +157,13 @@ section p{
     display: flex;
     gap: 15px;
     margin-top: 20px;
+    align-items: center;
+}
+
+.contact-links a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 #contact a {
@@ -483,6 +490,4 @@ html {
     width: 20px;
     height: 20px;
     max-width: 20px;
-    vertical-align: middle;
-    margin-right: 6px;
 }
