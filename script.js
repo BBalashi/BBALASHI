@@ -11,7 +11,7 @@ window.addEventListener('scroll', function() {
     } else {
         nav.classList.remove('scrolled')
     }
-    if (hero.getBoundingClientRect().bottom < 0) {
+    if (window.scrollY > 100) {
         backToTop.classList.add('visible');
     } else {
         backToTop.classList.remove('visible')
@@ -33,3 +33,4 @@ const sidebar = document.querySelector('#sidebar')
 hamburger.addEventListener('click', function() {
     sidebar.classList.toggle('open')
 })
+
