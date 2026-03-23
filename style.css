@@ -472,6 +472,7 @@ html {
 .contact-links img {
     width: 20px;
     height: 20px;
+    max-width: 20px;
     vertical-align: middle;
     margin-right: 6px;
 }
