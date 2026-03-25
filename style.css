@@ -1,14 +1,21 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
 }
 
 body {
-    background-color: #111111;
+    background-color: #0d0d0d;
     color: #e5e5e5;
-    font-family: monospace;
-    font-size: 18px;
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
     overflow-x: hidden;
+    line-height: 1.7;
 }
 
 header {
@@ -26,20 +33,24 @@ header {
 }
 
 header h1 {
-    font-size: 64px;
+    font-size: 72px;
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+    text-shadow: 0 0 60px rgba(249, 168, 212, 0.35), 0 0 120px rgba(249, 168, 212, 0.1);
+}
+
+header h2 {
+    font-size: 16px;
+    color: #888888;
     letter-spacing: 3px;
-    margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
-header h2{
-    font-size: 20px;
-    color: #cccccc;
-}
-
-header p{
-    margin-bottom: 7px;
-    font-size: 35px;
-    color: #e5e5e5;
+header p {
+    margin-bottom: 8px;
+    font-size: 28px;
+    color: #f9a8d4;
+    letter-spacing: 1px;
 }
 
 nav{
@@ -50,15 +61,17 @@ nav{
     z-index: 1000;
 }
 
-nav a{
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    background: rgba(255, 255, 255, 0.05);
-    padding: 6px 12px;
-    border: 1px solid rgba(249, 168, 212, 0.4);
+nav a {
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.06);
+    padding: 8px 18px;
+    border: 1px solid rgba(249, 168, 212, 0.35);
     border-radius: 10px;
     text-decoration: none;
     color: #e5e5e5;
+    font-size: 13px;
+    letter-spacing: 1px;
     transition: all 0.3s ease;
 }
 
@@ -92,20 +105,22 @@ section::after {
     transform: translateX(-50%);
 }
 
-section h2{
-    color: #cccccc;
-    font-size: 36px;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(249, 168, 212, 0.3);
-    padding-bottom: 10px;
+section h2 {
+    color: #ffffff;
+    font-size: 42px;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(249, 168, 212, 0.4);
+    padding-bottom: 12px;
     display: inline-block;
+    text-transform: uppercase;
 }
 
-section p{
-    max-width: 600px;
-    line-height: 1.7;
-    font-size: 18px;
+section p {
+    max-width: 620px;
+    line-height: 1.9;
+    font-size: 15px;
+    color: #aaaaaa;
 }
 
 .projects-list {
@@ -119,19 +134,20 @@ section p{
 }
 
 .project-card {
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(249, 168, 212, 0.2);
-    border-radius: 10px;
-    padding: 24px;
-    transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(249, 168, 212, 0.15);
+    border-radius: 14px;
+    padding: 28px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    border: 1px solid #f9a8d4;
-    box-shadow: 0 8px 30px rgba(249, 168, 212, 0.15);
+    transform: translateY(-6px);
+    border: 1px solid rgba(249, 168, 212, 0.7);
+    box-shadow: 0 12px 40px rgba(249, 168, 212, 0.12), 0 0 0 1px rgba(249, 168, 212, 0.1);
 }
 
 .project-header {
@@ -182,6 +198,34 @@ section p{
     backdrop-filter: blur(10px);
 }
 
+.github-link {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(249, 168, 212, 0.4);
+    text-decoration: none;
+    color: #e5e5e5;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+.github-link:hover {
+    border: 1px solid #f9a8d4;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.github-link img {
+    width: 20px;
+    height: 20px;
+}
+
 nav.scrolled {
     position: fixed;
     top: 0;
@@ -198,6 +242,26 @@ nav.scrolled {
     box-shadow: 0 2px 20px rgba(249, 168, 212, 0.15);
 }
 
+.languages {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.lang-tag {
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(249, 168, 212, 0.4);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: #e5e5e5;
+    letter-spacing: 1px;
+    pointer-events: none;
+}
+
 .about-cards {
     display: flex;
     gap: 20px;
@@ -211,23 +275,36 @@ nav.scrolled {
 .about-card {
     flex: 1;
     height: 700px;
-    border-radius: 12px;
-    border: 1px solid rgba(249, 168, 212, 0.2);
-    background: rgba(255, 255, 255, 0.05);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    border: 1px solid rgba(249, 168, 212, 0.15);
+    background: rgba(255, 255, 255, 0.03);
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding-top: 30px;
-    transition: all 0.4s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
+    position: relative;
+}
+
+.about-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.6) 100%);
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.about-card .about-btn {
+    position: relative;
+    z-index: 1;
 }
 
 .about-card:hover {
-    border: 1px solid #f9a8d4;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    border: 1px solid rgba(249, 168, 212, 0.6);
+    box-shadow: 0 0 30px rgba(249, 168, 212, 0.1);
+    transform: translateY(-4px);
 }
 
 #card-tech {
@@ -329,9 +406,6 @@ header::after {
     transform: translateX(-50%);
 }
 
-html {
-    scroll-padding-top: 60px;
-}
 
 #hamburger {
     display: none;
@@ -350,8 +424,8 @@ html {
     left: 50%;
     top: 0;
     bottom: 0;
-    width: 2px;
-    background-color: rgba(249, 168, 212, 0.15);
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(249, 168, 212, 0.5), transparent);
     transform: translateX(-50%);
 }
 
@@ -410,43 +484,80 @@ html {
     position: absolute;
     left: 50%;
     top: 20px;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background: #f9a8d4;
     border-radius: 50%;
     transform: translateX(-50%);
+    box-shadow: 0 0 12px rgba(249, 168, 212, 0.8), 0 0 24px rgba(249, 168, 212, 0.4);
 }
 
 @media (max-width: 768px) {
 
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 38px;
+        letter-spacing: 3px;
+        word-break: break-word;
+    }
+
+    header p {
+        font-size: 22px;
+    }
+
+    header h2 {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    section h2 {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    section, header {
+        padding: 30px 20px;
+    }
+
+    section p {
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    header h1, header p, header h2 {
+        padding: 0 15px;
+    }
+
     .project-card {
         opacity: 1;
+    }
+
+    .projects-list {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .project-header {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .project-card p {
+        font-size: 13px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
     }
 
     .contact-links img {
         width: 20px;
         height: 20px;
         margin-right: 10px;
-    }
-
-    body {
-        font-size: 16px;
-    }
-
-    header h1 {
-        font-size: 36px;
-    }
-
-    header p {
-        font-size: 24px;
-    }
-
-    header h2 {
-        font-size: 16px;
-    }
-
-    section h2 {
-        font-size: 26px;
     }
 
     .timeline::before {
@@ -459,24 +570,6 @@ html {
         justify-content: flex-start;
     }
 
-    .projects-list {
-        grid-template-columns: 1fr;
-        padding: 0 15px;
-    }
-
-    .project-header {
-        align-items: center;
-        text-align: center;
-    }
-
-    .project-card p {
-        font-size: 14px;
-    }
-
-    .timeline-content p {
-        font-size: 14px;
-    }
-
     .timeline-item:nth-child(even) {
         padding-left: 30px;
     }
@@ -485,14 +578,8 @@ html {
         left: 10px;
     }
 
-    header h1 {
-        font-size: 36px;
-        word-break: break-word;
-    }
-
-    section, header {
-        padding: 20px;
-        box-sizing: border-box;
+    .timeline-content p {
+        font-size: 13px;
     }
 
     nav {
@@ -513,7 +600,7 @@ html {
         font-size: 20px;
         cursor: pointer;
         -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
     }
 
     #sidebar {
@@ -522,9 +609,9 @@ html {
         left: -100%;
         width: 250px;
         height: 100%;
-        background: rgba(15, 15, 15, 0.95);
+        background: rgba(13, 13, 13, 0.97);
         -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
         display: flex;
         flex-direction: column;
         padding: 80px 20px 20px;
@@ -542,13 +629,30 @@ html {
     #sidebar a {
         color: #e5e5e5;
         text-decoration: none;
-        font-size: 18px;
-        border-bottom: 1px solid rgba(249, 168, 212, 0.1);
-        padding-bottom: 10px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        border-bottom: 1px solid rgba(249, 168, 212, 0.15);
+        padding-bottom: 12px;
+        font-family: 'Space Mono', monospace;
     }
 
-    section p {
-        padding: 0 15px;
+    .about-cards {
+        flex-direction: column;
+        padding: 0 20px 30px 20px;
+    }
+
+    .about-card {
+        height: unset;
+        min-height: 350px;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+        background-size: cover;
+    }
+
+    .github-link {
+        font-size: 13px;
     }
     
     header h1, header p, header h2 {
@@ -603,7 +707,7 @@ html {
 #card-artist {
     background-image: url(arts.png);
     background-color: #ffffff;
-    background-size: 80%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     filter: grayscale(100%);
