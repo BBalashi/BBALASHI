@@ -1,7 +1,7 @@
 const nav = document.querySelector('nav')
 const hero = document.querySelector('header')
 const backToTop = document.querySelector('#back-to-top')
-const titles = ['Data Analyst', 'Tech wizard', 'Athlete', 'Artist']
+const titles = ['Data Analyst', 'Full-Stack Developer', 'Problem Solver', 'Builder']
 let currentIndex = 0
 const cyclingTitle = document.querySelector('#cycling-title')
 
