@@ -5,6 +5,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="script.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -34,49 +35,54 @@
         </header>
 
         <section id="about">
-            <h2>About Me</h2>
-            <p>I'm Baraa — a 3rd-year Business Technology Management student at the University of Ottawa. I work at the intersection of data and development: analyzing systems, building dashboards, and writing code that solves real problems. Outside the screen, I train hard and create — but tech is where I build my future.</p>
-            <h3 class="language-title">Languages I speak:</h3>
-            <div class="languages">
-                <span class="lang-tag">English</span>
-                <span class="lang-tag">French</span>
-                <span class="lang-tag">Arabic</span>
+            <div class="about-glass-card">
+                <h2>About Me</h2>
+                <p>I'm Baraa — a 3rd-year Business Technology Management student at the University of Ottawa. I work at the intersection of data and development: analyzing systems, building dashboards, and writing code that solves real problems. Outside the screen, I train hard and create — but tech is where I build my future.</p>
+                <h3 class="language-title">Languages I speak:</h3>
+                <div class="languages">
+                    <span class="lang-tag">English</span>
+                    <span class="lang-tag">French</span>
+                    <span class="lang-tag">Arabic</span>
+                </div>
             </div>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
             <p>A toolkit built through real work — not just coursework.</p>
-            <div class="skills-grid">
-                <div class="skill-category-card">
+            <div class="radar-charts">
+                <div class="skill-category-card radar-card">
                     <h3>Data & Analytics</h3>
-                    <div class="skill-list">
-                        <div class="skill-item"><div class="skill-label"><span>Excel</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
-                        <div class="skill-item"><div class="skill-label"><span>Power BI</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
-                        <div class="skill-item"><div class="skill-label"><span>Tableau</span><span>65%</span></div><div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div></div>
-                        <div class="skill-item"><div class="skill-label"><span>Adobe Analytics</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
-                        <div class="skill-item"><div class="skill-label"><span>Google Analytics</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
-                    </div>
+                    <canvas id="chart-data"></canvas>
+                    <ul class="chart-legend">
+                        <li><span style="background: #f9a8d4"></span>Excel</li>
+                        <li><span style="background: #c4b5fd"></span>Power BI</li>
+                        <li><span style="background: #7dd3fc"></span>Tableau</li>
+                        <li><span style="background: #6ee7b7"></span>Adobe Analytics</li>
+                        <li><span style="background: #fca5a5"></span>Google Analytics</li>
+                    </ul>
                 </div>
-                <div class="skill-category-card">
+                <div class="skill-category-card radar-card">
                     <h3>Languages & Dev</h3>
-                    <div class="skill-list">
-                        <div class="skill-item"><div class="skill-label"><span>SQL</span><span>70%</span></div><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
-                        <div class="skill-item"><div class="skill-label"><span>Python</span><span>60%</span></div><div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div></div>
-                        <div class="skill-item"><div class="skill-label"><span>HTML</span><span>50%</span></div><div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div></div>
-                        <div class="skill-item"><div class="skill-label"><span>CSS</span><span>70%</span></div><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
-                        <div class="skill-item"><div class="skill-label"><span>Git</span><span>92%</span></div><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
-                    </div>
+                    <canvas id="chart-dev"></canvas>
+                    <ul class="chart-legend">
+                        <li><span style="background: #f9a8d4"></span>SQL</li>
+                        <li><span style="background: #c4b5fd"></span>Python</li>
+                        <li><span style="background: #7dd3fc"></span>HTML</li>
+                        <li><span style="background: #6ee7b7"></span>CSS</li>
+                        <li><span style="background: #fca5a5"></span>Git</li>
+                    </ul>
                 </div>
-                <div class="skill-category-card">
+                <div class="skill-category-card radar-card">
                     <h3>Tools & Productivity</h3>
-                    <div class="skill-list">
-                        <div class="skill-item"><div class="skill-label"><span>JIRA</span><span>100%</span></div><div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div></div>
-                        <div class="skill-item"><div class="skill-label"><span>MS Office Suite</span><span>100%</span></div><div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div></div>
-                        <div class="skill-item"><div class="skill-label"><span>Google Suite</span><span>100%</span></div><div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div></div>
-                        <div class="skill-item"><div class="skill-label"><span>MS SharePoint</span><span>75%</span></div><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
-                        <div class="skill-item"><div class="skill-label"><span>PostgreSQL</span><span>70%</span></div><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
-                    </div>
+                    <canvas id="chart-tools"></canvas>
+                    <ul class="chart-legend">
+                        <li><span style="background: #f9a8d4"></span>JIRA</li>
+                        <li><span style="background: #c4b5fd"></span>MS Office Suite</li>
+                        <li><span style="background: #7dd3fc"></span>Google Suite</li>
+                        <li><span style="background: #6ee7b7"></span>MS SharePoint</li>
+                        <li><span style="background: #fca5a5"></span>PostgreSQL</li>
+                    </ul>
                 </div>
             </div>
         </section>

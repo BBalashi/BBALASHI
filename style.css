@@ -64,7 +64,7 @@ nav{
 nav a {
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(0, 0, 0, 0.45);
     padding: 8px 18px;
     border: 1px solid rgba(249, 168, 212, 0.35);
     border-radius: 10px;
@@ -90,6 +90,7 @@ section {
     align-items: center;
     text-align: center;
     position: relative;
+    isolation: isolate;
     padding: 30px 0;
 }
 
@@ -136,7 +137,7 @@ section p {
 .project-card {
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(249, 168, 212, 0.15);
     border-radius: 14px;
     padding: 28px;
@@ -181,7 +182,7 @@ section p {
 #contact a {
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.45);
     padding: 10px 20px;
     border-radius: 10px;
     border: 1px solid rgba(249, 168, 212, 0.4);
@@ -201,7 +202,7 @@ section p {
 .github-link {
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.45);
     padding: 10px 20px;
     border-radius: 10px;
     border: 1px solid rgba(249, 168, 212, 0.4);
@@ -236,7 +237,7 @@ nav.scrolled {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     justify-content: flex-start;
-    z-index: 1000;
+    z-index: 9999;
     transform: none;
     margin-top: 0;
     box-shadow: 0 2px 20px rgba(249, 168, 212, 0.15);
@@ -250,7 +251,7 @@ nav.scrolled {
 }
 
 .lang-tag {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.45);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     border: 1px solid rgba(249, 168, 212, 0.4);
@@ -260,6 +261,36 @@ nav.scrolled {
     color: #e5e5e5;
     letter-spacing: 1px;
     pointer-events: none;
+}
+
+.about-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    width: 100%;
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.about-layout .about-card {
+    flex-shrink: 0;
+    width: 300px;
+    height: 420px;
+}
+
+.about-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+}
+
+.about-spacer {
+    flex-shrink: 0;
+    width: 300px;
 }
 
 .about-cards {
@@ -277,7 +308,7 @@ nav.scrolled {
     height: 700px;
     border-radius: 16px;
     border: 1px solid rgba(249, 168, 212, 0.15);
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(0, 0, 0, 0.45);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -356,7 +387,7 @@ nav.scrolled {
     position: fixed;
     bottom: 30px;
     left: 30px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.45);
     color: #e5e5e5;
     border: 1px solid rgba(249, 168, 212, 0.4);
     padding: 10px 16px;
@@ -392,6 +423,84 @@ header::before {
     filter: blur(4px) grayscale(100%);
     z-index: 0;
     opacity: 0.4;
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('phone.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px) grayscale(100%);
+    z-index: 0;
+    opacity: 0.4;
+}
+
+#projects::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('project.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px) grayscale(100%);
+    z-index: 0;
+    opacity: 0.4;
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('wizard (2).png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px) grayscale(100%);
+    z-index: 0;
+    opacity: 0.4;
+}
+
+#experience::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('jp.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px) grayscale(100%);
+    z-index: 0;
+    opacity: 0.4;
+}
+
+#skills::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('coding.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px) grayscale(100%);
+    z-index: 0;
+    opacity: 0.4;
+}
+
+#contact h2,
+#contact p,
+#contact .contact-links,
+#projects h2,
+#projects p,
+#projects .github-link,
+#projects .projects-list,
+.about-glass-card,
+#skills h2,
+#skills p,
+.radar-charts,
+#experience h2,
+#experience p,
+.timeline {
+    position: relative;
+    z-index: 1;
 }
 
 header::after {
@@ -444,7 +553,7 @@ header::after {
 }
 
 .timeline-content {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(249, 168, 212, 0.2);
     border-radius: 6px;
     padding: 20px;
@@ -492,6 +601,33 @@ header::after {
     border-radius: 50%;
     transform: translateX(-50%);
     box-shadow: 0 0 12px rgba(249, 168, 212, 0.8), 0 0 24px rgba(249, 168, 212, 0.4);
+}
+
+
+.chart-legend {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0;
+    display: none;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    justify-content: center;
+}
+
+.chart-legend li {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #aaaaaa;
+}
+
+
+.chart-legend span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
 }
 
 @media (max-width: 768px) {
@@ -594,7 +730,7 @@ header::after {
         top: 15px;
         left: 15px;
         z-index: 2000;
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(0, 0, 0, 0.45);
         color: #e5e5e5;
         border: 1px solid rgba(249, 168, 212, 0.4);
         padding: 8px 12px;
@@ -664,6 +800,32 @@ header::after {
         font-size: 11px;
     }
 
+    .radar-charts {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+        gap: 24px;
+        margin-top: 32px;
+    }
+
+    .radar-card {
+        width: 100%;
+        max-width: 280px;
+        padding: 16px;
+    }
+
+    .radar-card canvas {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .chart-legend {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+
 }
 
 #sidebar {
@@ -708,6 +870,21 @@ header::after {
     filter: grayscale(0%);
 }
 
+.about-glass-card {
+    background: rgba(0, 0, 0, 0.45);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(249, 168, 212, 0.2);
+    border-radius: 16px;
+    padding: 40px 48px;
+    max-width: 680px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .language-title{
     font-size: 16px;
     letter-spacing: 2px;
@@ -728,7 +905,7 @@ header::after {
 }
 
 .skill-category-card {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(0, 0, 0, 0.45);
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     border: 1px solid rgba(249, 168, 212, 0.2);
@@ -783,4 +960,36 @@ header::after {
     height: 100%;
     background: linear-gradient(to right, #f9a8d4, #e879a0);
     border-radius: 2px;
+}
+
+.radar-charts {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 48px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.radar-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.radar-card h3 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #f9a8d4;
+    margin: 0 0 12px 0;
+}
+
+.radar-card canvas {
+    width: 360px !important;
+    height: 360px !important;
 }
