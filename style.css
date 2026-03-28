@@ -417,67 +417,7 @@ header::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('loner.avif');
-    background-size: cover;
-    background-position: center;
-    filter: blur(4px) grayscale(100%);
-    z-index: 0;
-    opacity: 0.4;
-}
-
-#contact::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('phone.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(4px) grayscale(100%);
-    z-index: 0;
-    opacity: 0.4;
-}
-
-#projects::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('project.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(4px) grayscale(100%);
-    z-index: 0;
-    opacity: 0.4;
-}
-
-#about::before {
-    content: '';
-    position: absolute;
-    inset: 0;
     background: url('wizard (2).png');
-    background-size: cover;
-    background-position: center;
-    filter: blur(4px) grayscale(100%);
-    z-index: 0;
-    opacity: 0.4;
-}
-
-#experience::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('jp.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(4px) grayscale(100%);
-    z-index: 0;
-    opacity: 0.4;
-}
-
-#skills::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('coding.jpg');
     background-size: cover;
     background-position: center;
     filter: blur(4px) grayscale(100%);
