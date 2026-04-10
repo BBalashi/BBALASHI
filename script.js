@@ -1,4 +1,3 @@
-const nav = document.querySelector('nav')
 const hero = document.querySelector('header')
 const backToTop = document.querySelector('#back-to-top')
 const titles = ['Data Analyst', 'Full-Stack Developer', 'Problem Solver', 'Builder']
@@ -9,15 +8,12 @@ const ctx2 = document.getElementById('chart-dev').getContext('2d')
 const ctx3 = document.getElementById('chart-tools').getContext('2d')
 
 window.addEventListener('scroll', function() {
-    if (hero.getBoundingClientRect().bottom < 0) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled')
-    }
     if (window.scrollY > 100) {
         backToTop.classList.add('visible');
+        hamburger.classList.add('visible');
     } else {
         backToTop.classList.remove('visible')
+        hamburger.classList.remove('visible');
     }
 })
 

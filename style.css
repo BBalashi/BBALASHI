@@ -227,21 +227,6 @@ section p {
     height: 20px;
 }
 
-nav.scrolled {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 10px 20px;
-    background: rgba(15, 15, 15, 0.85);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    justify-content: flex-start;
-    z-index: 9999;
-    transform: none;
-    margin-top: 0;
-    box-shadow: 0 2px 20px rgba(249, 168, 212, 0.15);
-}
 
 .languages {
     display: flex;
@@ -417,12 +402,12 @@ header::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('wizard (2).png');
+    background: url('wizard.png');
     background-size: cover;
     background-position: center;
     filter: blur(4px) grayscale(100%);
     z-index: 0;
-    opacity: 0.4;
+    opacity: 0.15;
 }
 
 #contact h2,
@@ -457,7 +442,28 @@ header::after {
 
 
 #hamburger {
-    display: none;
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.45);
+    color: #e5e5e5;
+    border: 1px solid rgba(249, 168, 212, 0.4);
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+#hamburger.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .timeline {
@@ -664,56 +670,6 @@ header::after {
         display: none;
     }
 
-    #hamburger {
-        display: block;
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        z-index: 2000;
-        background: rgba(0, 0, 0, 0.45);
-        color: #e5e5e5;
-        border: 1px solid rgba(249, 168, 212, 0.4);
-        padding: 8px 12px;
-        border-radius: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        -webkit-backdrop-filter: blur(4px);
-        backdrop-filter: blur(4px);
-    }
-
-    #sidebar {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 250px;
-        height: 100%;
-        background: rgba(13, 13, 13, 0.97);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        display: flex;
-        flex-direction: column;
-        padding: 80px 20px 20px;
-        gap: 20px;
-        z-index: 1500;
-        transition: left 0.3s ease;
-        border-right: 1px solid rgba(249, 168, 212, 0.2);
-        overflow: hidden;
-    }
-
-    #sidebar.open {
-        left: 0;
-    }
-
-    #sidebar a {
-        color: #e5e5e5;
-        text-decoration: none;
-        font-size: 16px;
-        letter-spacing: 1px;
-        border-bottom: 1px solid rgba(249, 168, 212, 0.15);
-        padding-bottom: 12px;
-        font-family: 'Space Mono', monospace;
-    }
-
     .github-link {
         font-size: 13px;
     }
@@ -769,13 +725,36 @@ header::after {
 }
 
 #sidebar {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background: rgba(13, 13, 13, 0.97);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    padding: 80px 20px 20px;
+    gap: 20px;
+    z-index: 1500;
+    transition: left 0.3s ease;
+    border-right: 1px solid rgba(249, 168, 212, 0.2);
+    overflow: hidden;
 }
 
-@media (max-width: 768px) {
-    #sidebar {
-        display: flex;
-    }
+#sidebar.open {
+    left: 0;
+}
+
+#sidebar a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(249, 168, 212, 0.15);
+    padding-bottom: 12px;
+    font-family: 'Space Mono', monospace;
 }
 
 
